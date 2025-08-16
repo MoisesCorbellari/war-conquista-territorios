@@ -22,6 +22,7 @@ O desafio utiliza **structs**, **vetores** e um menu interativo para cadastrar a
     - função para limpar o buffer do teclado: `limpar.h`
 
 ---
+
 ## Estrutura
 ```plaintext
 war-conquista-territorios/
@@ -32,6 +33,7 @@ war-conquista-territorios/
 └── README.md # documentação do projeto
 ```
 ---
+
 ## Saída
 ```plaintext
 ----------------------------------------------
