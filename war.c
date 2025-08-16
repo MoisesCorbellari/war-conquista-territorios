@@ -77,8 +77,8 @@ int main(){
                     printf("Nenhuma tropa cadastrada!\n");
                 } else{
                     for (int i = 0; i < batalhao; i++){
-                        printf("Território %d\n"
-                                    "- Nome: %s | Dominado pelo exército: %s | Tropas: %d\n\n", 
+                        printf("--- Território %d ---\n"
+                                    " Nome: %s | Dominado pelo exército: %s | Tropas: %d\n\n", 
                             i+1, territorios[i].nome, territorios[i].cor, territorios[i].tropas);
                     }
                 }

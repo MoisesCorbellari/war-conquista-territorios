@@ -24,7 +24,7 @@ O desafio utiliza **structs**, **vetores** e um menu interativo para cadastrar a
 ---
 ## Estrutura
 ```plaintext
-Desafio/
+war-conquista-territorios/
 ├── src/
 │ └── limpar.h # Função para limpar o buffer de entrada
 ├── war #arquivo executável
@@ -50,6 +50,23 @@ Número de tropas: 5
 
 Tropas cadastradas com sucesso!
 
---- Lista de Territórios ---
-1) Nome: França | Dominado pelo exército: Azul | Tropas: 5
+        Lista dos Territórios    
+--- Território 1 ---
+    Nome: França | Dominado pelo exército: Azul | Tropas: 5
 ```
+
+## Rodando o jogo
+1. **Clonar repositório**
+    ```bash
+    git clone https://github.com/MoisesCorbellari/war-conquista-territorios.git
+   ```
+2. **Compilar** (caso não tenha o arquivo executável)
+    ```bash
+    cd war-conquista-territorios/
+
+    gcc war.c -o war
+    ```
+3. **Executar**
+    ```bash
+    ./war
+    ```
