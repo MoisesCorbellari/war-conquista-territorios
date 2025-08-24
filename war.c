@@ -31,7 +31,7 @@ int main(){
     
     //Cadastro de territórios
     printf("----------------------------------------------\n");
-    printf("    WAR: Conquista de Territórios - parte 2\n");
+    printf("        WAR: Conquista de Territórios        \n");
     printf("----------------------------------------------\n");
     for (int i = 0; i < qtdTerritorio; i++){
         printf("\n--- Cadastrando Território %d ---\n", i+1);
