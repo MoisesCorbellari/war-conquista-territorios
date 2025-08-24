@@ -1,16 +1,16 @@
 # WAR: Conquista de Territórios
-Jogo feito em **C** para cadastro e exibição de territórios, inspirado no jogo de tabuleiro **WAR**.
-O desafio utiliza **structs**, **vetores** e um menu interativo para cadastrar até **5 Territórios**, registrando **nome do território**, **cor do exército** e **número de tropas**.
+Jogo feito em C inspirado no tabuleiro WAR, permitindo cadastro, exibição e ataque entre territórios. O sistema utiliza **structs**, **vetores**, **alocação dinâmica** e **modularização**.
 
 ---
 
 ## Descrição
 - O jogo permite:
-    - Cadastrar até **5 territórios**.
-    - Definir o **nome** de cada território.
-    - Escolher a **cor do exército** (ex: Azul, Verde e etc.).
-    - Informar o **número de tropas**.
-    - Listar os terrtórios cadastrados.
+    - Cadastrar até 5 territórios.
+    - Definir o nome de cada território.
+    - Escolher a cor do exército (ex: Azul, Verde, Vermelho).
+    - Informar o número de tropas.
+    - Exibir os territórios cadastrados.
+    - Realizar ataques entre territórios, com movimentação de tropas e atualização de cores.
 
 ---
 
@@ -18,7 +18,9 @@ O desafio utiliza **structs**, **vetores** e um menu interativo para cadastrar a
 - Linguagem: **C**
 - Bibliotecas:
     - `stdio.h`
-    - `string`
+    - `stdlib.h`
+    - `string.h`
+    - `time.h`
     - função para limpar o buffer do teclado: `limpar.h`
 
 ---
@@ -27,34 +29,58 @@ O desafio utiliza **structs**, **vetores** e um menu interativo para cadastrar a
 ```plaintext
 war-conquista-territorios/
 ├── src/
-│ └── limpar.h # Função para limpar o buffer de entrada
-├── war #arquivo executável
-├── war.c # código principal do jogo
-└── README.md # documentação do projeto
+│   ├── limpar.h          # Função para limpar buffer de entrada
+│   ├── estrutura.h       # Definição da struct Territorio
+│   └── territorio.h      # Implementação das funções: cadastrar, exibir, atacar
+├── war.c                 # Código principal do jogo
+├── war                   # Executável (gerado após compilação)
+└── README.md             # Documentação do projeto
 ```
 ---
 
 ## Saída
 ```plaintext
 ----------------------------------------------
-    WAR: Conquista de Territórios - parte 1
+    WAR: Conquista de Territórios
 ----------------------------------------------
-1 - Cadastrar território
-2 - Listar territórios
-0 - Sair
-----------------------------------------------
-Digite a opção:
-
 --- Cadastrando Território 1 ---
 Nome do território: França
 Cor do Exército (ex: Azul, Verde): Azul
 Número de tropas: 5
 
-Tropas cadastradas com sucesso!
+--- Cadastrando Território 2 ---
+Nome do território: Alemanha
+Cor do Exército (ex: Azul, Verde): Vermelho
+Número de tropas: 3
 
-        Lista dos Territórios    
---- Território 1 ---
-    Nome: França | Dominado pelo exército: Azul | Tropas: 5
+===================================
+             Tropas atuais
+===================================
+1. Nome: França (Exército: Azul, Tropas: 5)
+2. Nome: Alemanha (Exército: Vermelho, Tropas: 3)
+
+===================================
+               ATACAR
+===================================
+Escolha o território atacante (1 a 5, ou 0 para sair): 1
+Escolha o território defensor (1 a 5): 2
+
+Rolando os dados: França (4) vs Alemanha (2)
+França atacou com sucesso o território de Alemanha!
+Quantas tropas deseja mover para Alemanha? (1 a 4): 2
+
+-> França agora domina Alemanha!
+-> Exército: Azul | Tropas no território: 2
+-> França tem 3 tropas no território original.
+
+===================================
+             Tropas atuais
+===================================
+1. Nome: França (Exército: Azul, Tropas: 3)
+2. Nome: Alemanha (Exército: Azul, Tropas: 2)
+.
+.
+.
 ```
 
 ## Rodando o jogo
